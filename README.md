@@ -8,13 +8,14 @@ Each person implements one module.
 Home page
 
 Insurance
+  * Life
+  * Auto
 
 Retirement
-
-Banking
+  * Tools
+  * Calculator
 
 Claims
-
-
-
-* link bottom page links to real site?
+  * filing
+  * summary
+  * summary email
