@@ -6,7 +6,8 @@ Each person implements one module.
   
 ###Sections to implement:
 Home page
-
+  * Sign In
+  * Account Creation
 Insurance
   * Life
   * Auto
@@ -16,6 +17,6 @@ Retirement
   * Calculator
 
 Claims
-  * filing
-  * summary
-  * summary email
+  * Filing
+  * Summary
+  * Summary Email
