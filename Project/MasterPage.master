@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:HyperLink ID="HyperLink1" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute">For Buisness</asp:HyperLink>
+        <asp:Label ID="Label1" runat="server" style="z-index: 1; right: 150px; top: 15px; position: absolute" Text="1-877 On Your Side&reg"></asp:Label>
+        <asp:HyperLink ID="HyperLink2" runat="server" style="z-index: 1; left: 107px; top: 15px; position: absolute">For Finantial Advisors</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" style="z-index: 1; left: 266px; top: 15px; position: absolute">En Espanol</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink4" runat="server" style="z-index: 1; right: 60px; top: 15px; position: absolute">Contact us</asp:HyperLink>
+        <asp:ImageButton ID="ImageButton1" runat="server" style="z-index: 1; right: 30px; top: 15px; height: 18px; position: absolute" OnClick="ImageButton1_Click" ImageUrl="~/Images/search.png" />
+
+        
+    </div>
+        <asp:Label ID="Label3" runat="server" style="z-index: 1; right: 30px; top: 65px; position: absolute" Text=""></asp:Label>
+    <asp:Panel ID="Panel1" runat="server" visible="false" >
+        <asp:ImageButton ID="ImageButton2" runat="server" style="z-index: 1; right: 30px; top: 35px; position: absolute; height: 18px;" ImageUrl="~/Images/searchgo.png" />
+
+        <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; right: 50px; top: 34px; position: absolute; width: 300px;"></asp:TextBox>
+
+    </asp:Panel>
+        <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" OnClick="ImageButton3_Click" style="z-index: 1; left: 7px; top: 47px; position: absolute; Width: 154px" ImageUrl="~/Images/Logo.png" />
+    <asp:Panel ID="Panel3" runat="server" style="z-index: 1; right: 30px; top: 65px; position: absolute" Visible="True">
+        <asp:Button ID="Button1" runat="server" Text="Log in or sign up" OnClick="Button1_Click" />
+    </asp:Panel>
+    <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 30px; top: 93px; position: absolute; height: 200px; width: 145px;">
+        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
+
+        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute">
+        </asp:DropDownList>
+
+        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" placeholder="Username"></asp:TextBox>
+        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" placeholder="Password"></asp:TextBox>
+
+        <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" />
+        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
+
+        <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute">Sign up</asp:HyperLink>
+
+    </asp:Panel>
+       
+     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+     </asp:ContentPlaceHolder>
+       
+    </form>
+     </body>
+</html>
