@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterPageAuto.aspx.cs" Inherits="Project.RegisterPageAuto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="Registration" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-     <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
     
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 397px; top: 8px; position: absolute" Text="Please Enter Your Info and the Insurance You Want"></asp:Label>
+        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 320px; top: 100px; position: absolute" Text="Please Enter Your Info and the Insurance You Want" Font-Size="Larger"></asp:Label>
     
     </div>
         <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 514px; top: 180px; position: absolute"></asp:TextBox>
@@ -25,7 +20,7 @@
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 255px; top: 275px; position: absolute" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox4" ErrorMessage="Cannot be blank" style="z-index: 1; left: 255px; top: 459px; position: absolute"></asp:RequiredFieldValidator>
         <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords Must Match" style="z-index: 1; left: 255px; top: 367px; position: absolute" ControlToCompare="TextBox2" ControlToValidate="TextBox3" ></asp:CompareValidator>
-        <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 514px; top: 459px; position: absolute" TextMode="Email"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 514px; top: 462px; position: absolute" TextMode="Email"></asp:TextBox>
         <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 566px; top: 424px; position: absolute" Text="E-Mail:"></asp:Label>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox4" ErrorMessage="Must be an e-mail" style="z-index: 1; left: 740px; top: 456px; position: absolute" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 514px; top: 548px; position: absolute"></asp:TextBox>
@@ -57,11 +52,11 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ErrorMessage="Must be a valid zip code" style="z-index: 1; left: 735px; top: 968px; position: absolute" ValidationExpression="\d{5}(-\d{4})?" ControlToValidate="TextBox10"></asp:RegularExpressionValidator>
         <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 437px; top: 1030px; position: absolute" Text="Please check the insurances you want"></asp:Label>
         <asp:CheckBoxList ID="CheckBoxList1" runat="server" style="z-index: 1; left: 536px; top: 1096px; position: absolute; height: 28px; width: 96px">
-            <asp:ListItem Selected="True">Auto</asp:ListItem>
+            <asp:ListItem>Auto</asp:ListItem>
             <asp:ListItem>Life</asp:ListItem>
         </asp:CheckBoxList>
         <asp:CheckBox ID="CheckBox1" runat="server" style="z-index: 1; left: 516px; top: 1202px; position: absolute" Text="Agree to terms" />
         <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 547px; top: 1290px; position: absolute" Text="Submit" OnClick="Button1_Click" />
-    </form>
-</body>
-</html>
+</asp:Content>
+
+    
