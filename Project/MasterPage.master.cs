@@ -45,14 +45,16 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         conobj.ConnectionString = WebConfigurationManager.ConnectionStrings["DBConString"].ConnectionString;
         conobj.Open();
-        SqlCommand cmdobj = new SqlCommand("select * from Users where username="+TextBox2.Text, conobj);
+        SqlCommand cmdobj = new SqlCommand("select * from Users where Username='"+TextBox2.Text+"'", conobj);
         SqlDataReader sdrobj = cmdobj.ExecuteReader();
-        if (sdrobj.Read())
+        if (sdrobj.HasRows)
         {
-            if (sdrobj.GetString(0)==TextBox2.Text&&sdrobj.GetString(1)==TextBox3.Text)
+            sdrobj.Read();
+            if (sdrobj.GetString(0)==TextBox2.Text&&sdrobj.GetString(7)==TextBox3.Text)
             {
                 Session["Login"] = true;
                 Session["User"] = TextBox2.Text;
+                Panel2.Visible = false;
             }
         }
         Label4.Text = "Username or Password incorrect"; 
