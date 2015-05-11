@@ -37,7 +37,17 @@
    
         <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 10px; top: 160px; position: absolute" Text="what was the date that this occurred"></asp:Label>
         
-        <asp:Calendar ID="Calendar1" runat="server" style="z-index: 1; left: 421px; top: 180px; position: absolute; height: 188px; width: 259px"></asp:Calendar>
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="z-index: 1; left: 239px; top: 407px; position: absolute" Text="Continue" />
+        
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Solid" CellSpacing="1" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" style="z-index: 1; left: 400px; top: 160px; position: absolute; height: 188px; width: 259px" Width="330px">
+            <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+            <DayStyle BackColor="#CCCCCC" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="White" />
+            <OtherMonthDayStyle ForeColor="#999999" />
+            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+            <TitleStyle BackColor="#333399" BorderStyle="Solid" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" />
+            <TodayDayStyle BackColor="#999999" ForeColor="White" />
+        </asp:Calendar>
         
      </asp:Panel>
 </asp:Content>

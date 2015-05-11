@@ -23,4 +23,15 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
             RadioButton4.Enabled = false;
             RadioButton5.Enabled = false;
     }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        if (RadioButton4.Checked||RadioButton5.Checked)
+        {
+            Response.Redirect("Driver-Info.aspx");
+        }
+        else
+        {
+            Response.Redirect("Claim-Submited.aspx");
+        }
+    }
 }
