@@ -11,4 +11,16 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
     {
 
     }
+    protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+    {
+            RadioButton3.Enabled = true;
+            RadioButton4.Enabled = true;
+            RadioButton5.Enabled = true; 
+    }
+    protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
+    {
+            RadioButton3.Enabled = false;
+            RadioButton4.Enabled = false;
+            RadioButton5.Enabled = false;
+    }
 }
