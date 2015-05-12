@@ -54,8 +54,7 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
         cmdobj = new SqlCommand("Insert into autoclaim values (" + policynum + ",'"
             + RadioButton1.Checked + "','" + numcars + "','" + RadioButton6.Checked +
             "','" + RadioButton8.Checked + "','" + RadioButton10.Checked + "','" +
-            RadioButton12.Checked + "','" + RadioButton14.Checked + "'," + 
-            Calendar1.SelectedDate + ")", conobj);
+            RadioButton12.Checked + "','" + RadioButton14.Checked + "',null )", conobj);
         cmdobj.ExecuteNonQuery();
 
         if (RadioButton4.Checked||RadioButton5.Checked)

@@ -20,20 +20,20 @@
         <asp:RadioButton ID="RadioButton7" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 450px; top: 60px; position: absolute" Text="no"/>
    
         <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 10px; top: 80px; position: absolute" Text="Is there any body damage to your vehicle"></asp:Label>
-        <asp:RadioButton ID="RadioButton8" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 400px; top: 80px; position: absolute" Text="Yes"/>
-        <asp:RadioButton ID="RadioButton9" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 450px; top: 80px; position: absolute" Text="no"/>
+        <asp:RadioButton ID="RadioButton8" GroupName="RadioButton4" runat="server" style="z-index: 1; left: 400px; top: 80px; position: absolute" Text="Yes"/>
+        <asp:RadioButton ID="RadioButton9" GroupName="RadioButton4" runat="server" style="z-index: 1; left: 450px; top: 80px; position: absolute" Text="no"/>
    
         <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 10px; top: 100px; position: absolute" Text="Did you require towing or roadside assistance"></asp:Label>
-        <asp:RadioButton ID="RadioButton10" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 400px; top: 100px; position: absolute" Text="Yes"/>
-        <asp:RadioButton ID="RadioButton11" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 450px; top: 100px; position: absolute" Text="no"/>
+        <asp:RadioButton ID="RadioButton10" GroupName="RadioButton5" runat="server" style="z-index: 1; left: 400px; top: 100px; position: absolute" Text="Yes"/>
+        <asp:RadioButton ID="RadioButton11" GroupName="RadioButton5" runat="server" style="z-index: 1; left: 450px; top: 100px; position: absolute" Text="no"/>
 
         <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 10px; top: 120px; position: absolute" Text="Were ther any injuries"></asp:Label>
-        <asp:RadioButton ID="RadioButton12" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 400px; top: 120px; position: absolute" Text="Yes"/>
-        <asp:RadioButton ID="RadioButton13" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 450px; top: 120px; position: absolute" Text="no"/>
+        <asp:RadioButton ID="RadioButton12" GroupName="RadioButton6" runat="server" style="z-index: 1; left: 400px; top: 120px; position: absolute" Text="Yes"/>
+        <asp:RadioButton ID="RadioButton13" GroupName="RadioButton6" runat="server" style="z-index: 1; left: 450px; top: 120px; position: absolute" Text="no"/>
    
         <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 10px; top: 140px; position: absolute" Text="Was ther any glass damage"></asp:Label>
-        <asp:RadioButton ID="RadioButton14" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 400px; top: 140px; position: absolute" Text="Yes"/>
-        <asp:RadioButton ID="RadioButton15" GroupName="RadioButton3" runat="server" style="z-index: 1; left: 450px; top: 140px; position: absolute" Text="no"/>
+        <asp:RadioButton ID="RadioButton14" GroupName="RadioButton7" runat="server" style="z-index: 1; left: 400px; top: 140px; position: absolute" Text="Yes"/>
+        <asp:RadioButton ID="RadioButton15" GroupName="RadioButton7" runat="server" style="z-index: 1; left: 450px; top: 140px; position: absolute" Text="no"/>
    
         <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 10px; top: 160px; position: absolute" Text="what was the date that this occurred"></asp:Label>
         
