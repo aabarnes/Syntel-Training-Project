@@ -25,7 +25,7 @@ public partial class Registration : System.Web.UI.Page
             SqlCommand cmdobj = new SqlCommand("Insert into Users values ('" + TextBox6.Text +
                 "','" + TextBox1.Text + "','" + TextBox4.Text + "','" + TextBox7.Text + 
                 "','" + TextBox8.Text + "','" + TextBox9.Text + "','" + TextBox10.Text +
-                "','" + TextBox2.Text + "')", conobj);
+                "','" + TextBox2.Text + "',NULL, NULL)", conobj);
             cmdobj.ExecuteNonQuery();
             Session["Login"] = true;
             Session["User"] = TextBox6.Text;

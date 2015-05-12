@@ -11,9 +11,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:HyperLink ID="HyperLink1" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute">For Buisness</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink1" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute">For Business</asp:HyperLink>
         <asp:Label ID="Label1" runat="server" style="z-index: 1; right: 150px; top: 15px; position: absolute" Text="1-877 On Your Side&reg"></asp:Label>
-        <asp:HyperLink ID="HyperLink2" runat="server" style="z-index: 1; left: 107px; top: 15px; position: absolute">For Finantial Advisors</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" style="z-index: 1; left: 107px; top: 15px; position: absolute">For Financial Advisors</asp:HyperLink>
         <asp:HyperLink ID="HyperLink3" runat="server" style="z-index: 1; left: 266px; top: 15px; position: absolute">En Espanol</asp:HyperLink>
         <asp:HyperLink ID="HyperLink4" runat="server" style="z-index: 1; right: 60px; top: 15px; position: absolute">Contact us</asp:HyperLink>
         <asp:ImageButton ID="ImageButton1" runat="server" style="z-index: 1; right: 30px; top: 15px; height: 18px; position: absolute" OnClick="ImageButton1_Click" ImageUrl="~/Images/search.png" />
