@@ -32,7 +32,7 @@ public partial class home : System.Web.UI.Page
     {
         if ((bool)Session["Login"] == true)
         {
-            Response.Redirect("AutoInsurance.aspx");
+            Response.Redirect("TrueAutoInsurance.aspx");
         }
         else
         {

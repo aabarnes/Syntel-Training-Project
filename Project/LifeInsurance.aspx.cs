@@ -74,7 +74,8 @@ public partial class LifeInsurance : System.Web.UI.Page
             {
                 starting_payment +=  five;
             }
-            double monthly_payment = starting_payment / DropDownList5.SelectedIndex;
+            double yearly_payment = starting_payment / DropDownList5.SelectedIndex;
+            double monthly_payment = yearly_payment / 12;
         }
         
     }
