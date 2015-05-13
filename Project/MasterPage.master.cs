@@ -27,10 +27,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
         }
     }
 
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-    {
-        Panel1.Visible = !Panel1.Visible;
-    }
     protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("home.aspx");

@@ -5,52 +5,93 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style>
+        .right {
+           float:right;
+        }
+        .left {
+            float:left;
+        }
+        
+        #top {
+            padding:2px;
+            margin:4px 0px;
+        }
+
+        .display {
+            display:block;
+        }
+
+        .noDisplay {
+            display:none;
+        }
+    </style>
+    <script src="Scripts/jquery-1.11.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#ImageButton1').click(function () {
+                $('#searchBar').slideToggle();
+            });
+        });
+
+        function ShowSearch() {
+            $('.noDisplay').toggleClass('.display');
+        }
+    </script>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:HyperLink ID="HyperLink1" runat="server" style="z-index: 1; left: 10px; top: 15px; position: absolute">For Business</asp:HyperLink>
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; right: 150px; top: 15px; position: absolute" Text="1-877 On Your Side&reg"></asp:Label>
-        <asp:HyperLink ID="HyperLink2" runat="server" style="z-index: 1; left: 107px; top: 15px; position: absolute">For Financial Advisors</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink3" runat="server" style="z-index: 1; left: 266px; top: 15px; position: absolute">En Espanol</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink4" runat="server" style="z-index: 1; right: 60px; top: 15px; position: absolute">Contact us</asp:HyperLink>
-        <asp:ImageButton ID="ImageButton1" runat="server" style="z-index: 1; right: 30px; top: 15px; height: 18px; position: absolute" OnClick="ImageButton1_Click" ImageUrl="~/Images/search.png" />
-
+    <div id="wrapper">
+        <form id="form1" runat="server">
+        <div id="top">
+            <div class="left">
+                <asp:HyperLink ID="HyperLink1" runat="server">For Business</asp:HyperLink>&nbsp;|&nbsp;
+                <asp:HyperLink ID="HyperLink2" runat="server">For Financial Advisors</asp:HyperLink>&nbsp;|&nbsp;
+                <asp:HyperLink ID="HyperLink3" runat="server">En Espanol</asp:HyperLink>
+            </div>
+            <div class="right">
+                <asp:Label ID="Label1" runat="server" Text="1-877 On Your Side&reg"></asp:Label>&nbsp;|&nbsp;
+                <asp:HyperLink ID="HyperLink4" runat="server">Contact us</asp:HyperLink>&nbsp;&nbsp;
+                <asp:ImageButton id="ImageButton1" runat="server" style="height: 18px;" OnClientClick="ShowSearch(); return false;" ImageURL="~/Images/search.png" />
+            </div>
+        </div>
+        <div id="searchBar" class="noDisplay" style="clear:both; text-align:right;">
+            <asp:TextBox ID="TextBox1" runat="server" style="width: 300px;"></asp:TextBox>
+            <asp:ImageButton ID="ImageButton2" runat="server" style="height: 18px;" ImageUrl="~/Images/searchgo.png" />
+        </div>
+        <div style="clear:both;">
+            <div class="left">
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" OnClick="ImageButton3_Click" style="Width: 154px" ImageUrl="~/Images/Logo.png" />
+            </div>
+            <div class="right" style="text-align:right;">
+                <asp:Panel ID="Panel3" runat="server" Visible="True">
+                    <asp:Button ID="Button1" runat="server" Text="Log in or sign up" OnClick="Button1_Click" />
+                </asp:Panel>
+                <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+            </div>
+        </div>
         
-    </div>
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; right: 30px; top: 65px; position: absolute" Text=""></asp:Label>
-    <asp:Panel ID="Panel1" runat="server" visible="false" >
-        <asp:ImageButton ID="ImageButton2" runat="server" style="z-index: 1; right: 30px; top: 35px; position: absolute; height: 18px;" ImageUrl="~/Images/searchgo.png" />
+        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 30px; top: 93px; position: absolute; height: 200px; width: 145px;">
+            <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
 
-        <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; right: 50px; top: 34px; position: absolute; width: 300px;"></asp:TextBox>
+            <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute">
+            </asp:DropDownList>
 
-    </asp:Panel>
-        <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" OnClick="ImageButton3_Click" style="z-index: 1; left: 7px; top: 47px; position: absolute; Width: 154px" ImageUrl="~/Images/Logo.png" />
-    <asp:Panel ID="Panel3" runat="server" style="z-index: 1; right: 30px; top: 65px; position: absolute" Visible="True">
-        <asp:Button ID="Button1" runat="server" Text="Log in or sign up" OnClick="Button1_Click" />
-    </asp:Panel>
-    <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 30px; top: 93px; position: absolute; height: 200px; width: 145px;">
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
+            <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" placeholder="Username"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" placeholder="Password"></asp:TextBox>
 
-        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute">
-        </asp:DropDownList>
+            <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" OnClick="Button2_Click" />
+            <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
 
-        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" placeholder="Username"></asp:TextBox>
-        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" placeholder="Password"></asp:TextBox>
-
-        <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" OnClick="Button2_Click" />
-        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
-
-        <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
-
-    </asp:Panel>
+            <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
+        </asp:Panel>
        
-     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
         
-     </asp:ContentPlaceHolder>
+         </asp:ContentPlaceHolder>
        
-    </form>
+        </form>
+        </div>
      </body>
 </html>
