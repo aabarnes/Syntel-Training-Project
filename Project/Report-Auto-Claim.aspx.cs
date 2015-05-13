@@ -54,7 +54,8 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
         cmdobj = new SqlCommand("Insert into autoclaim values (" + policynum + ",'"
             + RadioButton1.Checked + "','" + numcars + "','" + RadioButton6.Checked +
             "','" + RadioButton8.Checked + "','" + RadioButton10.Checked + "','" +
-            RadioButton12.Checked + "','" + RadioButton14.Checked + "',null)", conobj);
+            RadioButton12.Checked + "','" + RadioButton14.Checked + "','"+
+            Calendar1.SelectedDate.ToShortDateString() + "')", conobj);
         cmdobj.ExecuteNonQuery();
 
         cmdobj = new SqlCommand("SELECT count(*) from autoclaim", conobj);
@@ -68,7 +69,7 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
         }
         else
         {
-            Response.Redirect("Claim-Submited.aspx");
+            Response.Redirect("Claim-Summary.aspx");
         }
     }
 }

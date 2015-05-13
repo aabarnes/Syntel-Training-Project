@@ -13,7 +13,7 @@ public partial class Caims_Center : System.Web.UI.Page
     }
     protected void Button3_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Report-Auto-Claim.aspx");
+        Response.Redirect("Auto-insurance-claim.aspx");
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
