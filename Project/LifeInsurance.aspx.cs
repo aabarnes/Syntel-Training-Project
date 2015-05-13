@@ -31,6 +31,7 @@ public partial class LifeInsurance : System.Web.UI.Page
     {
         if (CheckBox1.Checked)
         {
+            if(DropDownList3.SelectedIndex > -1 && DropDownList4.SelectedIndex > -1 && DropDownList5.SelectedIndex > -1 && DropDownList2.SelectedIndex > -1 && RadioButtonList1.SelectedIndex > -1 && RadioButtonList2.SelectedIndex > -1){
             double starting_payment = Convert.ToDouble(TextBox4.Text);
             
             double five = starting_payment * 1.05;
@@ -76,6 +77,7 @@ public partial class LifeInsurance : System.Web.UI.Page
             }
             double yearly_payment = starting_payment / DropDownList5.SelectedIndex;
             double monthly_payment = yearly_payment / 12;
+            }
         }
         
     }

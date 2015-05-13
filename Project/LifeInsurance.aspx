@@ -127,6 +127,12 @@
 
     <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 621px; top: 1618px; position: absolute"></asp:TextBox>
 
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 289px; top: 1619px; position: absolute" ControlToValidate="TextBox4"></asp:RequiredFieldValidator>
+
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 289px; top: 701px; position: absolute" ControlToValidate="RadioButtonList1"></asp:RequiredFieldValidator>
+
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 289px; top: 1430px; position: absolute" ControlToValidate="RadioButtonList2"></asp:RequiredFieldValidator>
+
     <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 531px; top: 1682px; position: absolute" Text="How long will you pay for it in years?" Font-Size="X-Large"></asp:Label>
 
     <asp:DropDownList ID="DropDownList5" runat="server" style="z-index: 1; left: 681px; top: 1777px; position: absolute">
