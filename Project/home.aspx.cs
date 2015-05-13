@@ -28,26 +28,5 @@ public partial class home : System.Web.UI.Page
     {
         Response.Redirect("Claims_Center.aspx");
     }
-    protected void Button7_Click(object sender, EventArgs e)
-    {
-        if ((bool)Session["Login"] == true)
-        {
-            Response.Redirect("TrueAutoInsurance.aspx");
-        }
-        else
-        {
-            Response.Redirect("Registration.aspx");
-        }
-    }
-    protected void Button8_Click(object sender, EventArgs e)
-    {
-        if ((bool)Session["Login"] == true)
-        {
-            Response.Redirect("LifeInsurance.aspx");
-        }
-        else
-        {
-            Response.Redirect("Registration.aspx");
-        }
-    }
+
 }
