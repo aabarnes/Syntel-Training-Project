@@ -29,6 +29,23 @@ public partial class Registration : System.Web.UI.Page
             cmdobj.ExecuteNonQuery();
             Session["Login"] = true;
             Session["User"] = TextBox6.Text;
+
+            if (CheckBoxList1.Items[0].Selected)
+            {
+                if (CheckBoxList1.Items[1].Selected)
+                {
+                    Session["Life"] = true;
+                }
+                Response.Redirect("TrueAutoInsurance.aspx");
+            }
+            else if (CheckBoxList1.Items[1].Selected)
+            {
+                Response.Redirect("LifeInsurance.aspx");
+            }
+            else
+            {
+                Response.Redirect("home.aspx");
+            }
         }
     }
 }
