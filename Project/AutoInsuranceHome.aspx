@@ -13,7 +13,7 @@
         <h1>You hit someone or something</h1>
         <p>Now you're paying for that person's damages as well as your own, and if you hit an object you're paying for the damages to that too.</p>
 
-         <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 221px; top: 1522px; position: absolute" Text="Get Auto Insurance" OnClick="Button7_Click" />
+         <asp:Button ID="Button7" runat="server" Text="Get Auto Insurance" OnClick="Button7_Click" />
 
         
     </div>
