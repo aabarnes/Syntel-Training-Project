@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-            <asp:Panel ID="Panel4" runat="server" style="z-index: 1; left: 100px; top: 100px; position: absolute; height: 500px; width: 750px">
+            <div style="text-align:center; padding: 5px;">
+                <h2 >Claim Summary</h2>
+                <div>
                 <asp:ListView ID="ListView1" runat="server" DataKeyNames="claimnum" DataSourceID="SqlDataSource1">
                     <AlternatingItemTemplate>
                         <tr style="background-color:#FFF8DC;">
@@ -216,6 +218,9 @@
                         </tr>
                     </SelectedItemTemplate>
                 </asp:ListView>
+                    </div>
+                <div>
+                    <h3 style="text-align:left;">Others Involved</h3>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="claimnum" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -240,6 +245,7 @@
                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                 </asp:GridView>
+                </div>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:DBConString %>" SelectCommand="SELECT * FROM [otherdriver] WHERE ([claimnum] = @claimnum)">
                     <SelectParameters>
                         <asp:SessionParameter Name="claimnum" SessionField="claimnum" Type="String" />
@@ -250,6 +256,6 @@
                         <asp:SessionParameter Name="claimnum" SessionField="claimnum" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </asp:Panel>
+            </div>
 </asp:Content>
 

@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 283px; top: 107px; position: absolute; height: 69px; width: 377px" Text="Not Yet Implemented" Font-Size="XX-Large"></asp:Label>
+    <asp:Label ID="Label3" runat="server" Text="Not Implemented" Font-Size="XX-Large"></asp:Label>
 
 </asp:Content>
 
