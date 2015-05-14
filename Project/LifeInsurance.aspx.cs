@@ -45,7 +45,7 @@ public partial class LifeInsurance : System.Web.UI.Page
             if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex <= 19 || ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 24))
             {
                 double bmi = (DropDownList3.SelectedIndex * 703)/ DropDownList4.SelectedIndex;
-                policy_max = policy_max * (bmi * .02);
+                policy_max = policy_max *Math.Abs(1- ((bmi-24) * .02));
             }
             
             for (int i = 0; i < CheckBoxList1.Items.Count; i++)
@@ -56,7 +56,7 @@ public partial class LifeInsurance : System.Web.UI.Page
                 }
             }
             double bad = diseases * .05;
-            policy_max = 1 - bad;
+            policy_max *= (1 - bad);
             if (RadioButtonList2.SelectedIndex == 0)
             {
                 policy_max = policy_max * .9;
