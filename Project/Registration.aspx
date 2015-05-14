@@ -47,7 +47,7 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="TextBox8" ErrorMessage="Must be letters only" ValidationExpression="([A-Za-z])+( [A-Za-z]+)*" ForeColor="Red" ></asp:RegularExpressionValidator>
         <br /><br />
         <asp:Label ID="Label10" runat="server" Text="State"></asp:Label><br />
-        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox9" runat="server" Width="30"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBox9" ErrorMessage="Cannot be blank" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Must be two letters" ValidationExpression="^[A-Z]{2}$" ControlToValidate="TextBox9" ForeColor="Red" ></asp:RegularExpressionValidator>
         <br /><br />
