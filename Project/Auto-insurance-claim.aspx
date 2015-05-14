@@ -11,7 +11,7 @@
         <div id="banner" style="background-color:blue; height: 41px; width: 100%">
             <asp:Label ID="Label3" runat="server" Font-Size="XX-Large" ForeColor="White" Text="Auto Insurance Claim"></asp:Label>
         </div>
-        <div id="content" style="text-align:left; height: 1000px; width: 100%;">
+        <div id="content" style="text-align:left; height: 1000px; width: 100%; padding:5px;">
             <h2 style="color: #ff6a00;">Steps to File and Report an Auto Insurance Claim</h2>
             <p> We've been helping our members with claims since 1926. With all that practice, we can get you back to normal quickly and fairly.
             <br />We take care of members by making sure they’re prepared.</p>

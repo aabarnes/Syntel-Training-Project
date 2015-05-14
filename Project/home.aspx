@@ -30,6 +30,7 @@
             <p>Be able to provide for you dependents if you die</p>
             <p>Pay off your debts</p>
         </div>
+        <br style="clear:both;" />
     </div>
 </asp:Content>
 

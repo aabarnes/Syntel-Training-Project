@@ -94,7 +94,7 @@
 
             <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
          </asp:Panel>
-        <div style="clear:both;">
+        <div style="clear:both; background-color:white;">
          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
          </asp:ContentPlaceHolder>
         </div>
