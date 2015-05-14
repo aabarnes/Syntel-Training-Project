@@ -118,7 +118,7 @@
         <asp:ListItem>no</asp:ListItem>
     </asp:RadioButtonList>
     <asp:Label ID="Label10" runat="server" style="z-index: 1; left: 612px; top: 1376px; position: absolute" Text="Do you smoke?" Font-Size="X-Large"></asp:Label>
-    <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 440px; top: 1063px; position: absolute" Text="Please check if you have/have had any of the following" Font-Size="X-Large"></asp:Label>
+    <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 381px; top: 1063px; position: absolute" Text="Please check if you have/have had any of the following" Font-Size="X-Large"></asp:Label>
     <asp:ImageButton ID="ImageButton4" runat="server" style="z-index: 1; left: 60px; top: 100px; position: absolute; height: 300px; width: 1000px" />
     <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="z-index: 1; left: 60px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Term" />
     <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="z-index: 1; left: 310px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Whole" />
@@ -133,7 +133,7 @@
 
      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 289px; top: 1430px; position: absolute" ControlToValidate="RadioButtonList2"></asp:RequiredFieldValidator>
 
-    <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 531px; top: 1682px; position: absolute" Text="How long will you pay for it in years?" Font-Size="X-Large"></asp:Label>
+    <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 482px; top: 1682px; position: absolute" Text="How long will you pay for it in years?" Font-Size="X-Large"></asp:Label>
 
     <asp:DropDownList ID="DropDownList5" runat="server" style="z-index: 1; left: 681px; top: 1777px; position: absolute">
         <asp:ListItem>10</asp:ListItem>
@@ -142,9 +142,15 @@
         <asp:ListItem>40</asp:ListItem>
     </asp:DropDownList>
 
-    <asp:CheckBox ID="CheckBox1" runat="server" style="z-index: 1; left: 551px; top: 1851px; position: absolute" Text="Confirm" />
+    <asp:CheckBox ID="CheckBox1" runat="server" style="z-index: 1; left: 663px; top: 1942px; position: absolute" Text="Confirm" />
 
-    <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 556px; top: 1930px;  position: absolute" Text="Submit" OnClick="Button7_Click" />
+     <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 621px; top: 1914px; position: absolute"></asp:TextBox>
+
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 278px; top: 1898px; position: absolute" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
+
+     <asp:Label ID="Label13" runat="server" style="z-index: 1; left: 530px; top: 1840px; position: absolute" Text="Who will be your benificiary?" Font-Size="X-Large"></asp:Label>
+
+    <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 668px; top: 2001px;  position: absolute" Text="Submit" OnClick="Button7_Click" />
 
     <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 507px; top: 1535px; position: absolute" Text="How much do you intend to pay?" Font-Size="X-Large"></asp:Label>
      </div>
