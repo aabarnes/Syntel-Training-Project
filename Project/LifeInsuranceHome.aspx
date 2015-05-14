@@ -13,7 +13,7 @@
         <h1>You lose your job or cannot work</h1>
         <p>How will you and your family survive until you're back on your feet?</p>
 
-        <asp:Button ID="Button8" runat="server" style="z-index: 1; left: 758px; top: 1522px; position: absolute" Text="Get Life Insurance" OnClick="Button8_Click" />
+        <asp:Button ID="Button8" runat="server" Text="Get Life Insurance" OnClick="Button8_Click" />
     </div>
 </asp:Content>
 
