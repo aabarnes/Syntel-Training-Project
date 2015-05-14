@@ -50,7 +50,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <form id="form1" runat="server">
         <div id="top">
             <div class="left">
@@ -70,36 +70,34 @@
         </div>
         <div style="clear:both; padding-top:5px;">
             <div class="left">
-                <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" OnClick="ImageButton3_Click" style="Width: 154px" ImageUrl="~/Images/Logo.png" />
+                <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" BorderStyle="Solid" OnClick="ImageButton3_Click" style="Width: 154px" ImageUrl="~/Images/Logo.png" />
             </div>
             <div class="right" style="text-align:right;">
                 <asp:Panel ID="Panel3" runat="server" Visible="True">
                     <asp:Button ID="Button1" runat="server" Text="Log in or sign up" OnClick="Button1_Click" />
                 </asp:Panel>
                 <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
-            </div>
-            <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 26px; top: 73px; position: absolute; overflow:visible!important; height: 200px; width: 145px;">
-                <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
-
-                <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute" Width="100">
-                </asp:DropDownList>
-
-                <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" Width="100" placeholder="Username"></asp:TextBox>
-                <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" Width="100" placeholder="Password"></asp:TextBox>
-
-                <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" OnClick="Button2_Click" />
-                <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
-
-                <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
-            </asp:Panel>
+            </div>  
         </div>
         
-        
-       
+        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 26px; top: 73px; position: absolute; overflow:visible!important; height: 200px; width: 145px;">
+            <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
+
+            <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute" Width="100">
+            </asp:DropDownList>
+
+            <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" Width="100" placeholder="Username"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" Width="100" placeholder="Password"></asp:TextBox>
+
+            <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" OnClick="Button2_Click" />
+            <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
+
+            <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
+         </asp:Panel>
+        <div style="clear:both;">
          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
-        
          </asp:ContentPlaceHolder>
-       
+        </div>
         </form>
         </div>
      </body>
