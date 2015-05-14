@@ -5,16 +5,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div style="padding:5px;">
         <h2>Report Auto Claim</h2>
-    <div style="text-align:left; margin:0% 20%">
+    <div style="text-align:left; min-width: 602px;">
         <div class="left" style="padding:5px; width:48%; min-width:300px;">
-            <asp:Label ID="Label5" runat="server" Text="Was Your vehicle involved in an accedent"></asp:Label><br />
-            <asp:Label ID="Label2" runat="server" Text="Number of vehicles involved in the accedent"></asp:Label><br />
-            <asp:Label ID="Label1" runat="server" Text="Was Your vehicle Stolen"></asp:Label><br />
-            <asp:Label ID="Label3" runat="server" Text="Is there any body damage to your vehicle"></asp:Label><br />
-            <asp:Label ID="Label4" runat="server" Text="Did you require towing or roadside assistance"></asp:Label><br />
-            <asp:Label ID="Label6" runat="server" Text="Were ther any injuries"></asp:Label><br />
-            <asp:Label ID="Label7" runat="server" Text="Was ther any glass damage"></asp:Label><br />
-            <asp:Label ID="Label8" runat="server" Text="What was the date that this occurred"></asp:Label>
+            <div class="right">
+                <asp:Label ID="Label5" runat="server" Text="Was Your vehicle involved in an accedent"></asp:Label><br />
+                <asp:Label ID="Label2" runat="server" Text="Number of vehicles involved in the accedent"></asp:Label><br />
+                <asp:Label ID="Label1" runat="server" Text="Was Your vehicle Stolen"></asp:Label><br />
+                <asp:Label ID="Label3" runat="server" Text="Is there any body damage to your vehicle"></asp:Label><br />
+                <asp:Label ID="Label4" runat="server" Text="Did you require towing or roadside assistance"></asp:Label><br />
+                <asp:Label ID="Label6" runat="server" Text="Were ther any injuries"></asp:Label><br />
+                <asp:Label ID="Label7" runat="server" Text="Was ther any glass damage"></asp:Label><br />
+                <asp:Label ID="Label8" runat="server" Text="What was the date that this occurred"></asp:Label>
+            </div>
         </div>
         <div class="right" style="padding:5px; width:48%; min-width:300px;">
             <asp:RadioButton ID="RadioButton1" GroupName="RadioButton1" runat="server" Text="Yes" OnCheckedChanged="RadioButton1_CheckedChanged" AutoPostBack="True"/>
