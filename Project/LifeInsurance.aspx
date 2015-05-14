@@ -120,10 +120,10 @@
     <asp:Label ID="Label10" runat="server" style="z-index: 1; left: 612px; top: 1376px; position: absolute" Text="Do you smoke?" Font-Size="X-Large"></asp:Label>
     <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 381px; top: 1063px; position: absolute" Text="Please check if you have/have had any of the following" Font-Size="X-Large"></asp:Label>
     <asp:ImageButton ID="ImageButton4" runat="server" style="z-index: 1; left: 60px; top: 100px; position: absolute; height: 300px; width: 1000px" />
-    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="z-index: 1; left: 60px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Term" />
-    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="z-index: 1; left: 310px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Whole" />
-    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" style="z-index: 1; left: 560px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Universal" />
-    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" style="z-index: 1; left: 810px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Variable" />
+    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="z-index: 1; left: 60px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Claim Center" />
+    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="z-index: 1; left: 310px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Auto Insurance Home" />
+    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" style="z-index: 1; left: 560px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Home" />
+    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" style="z-index: 1; left: 810px; top: 410px; position: absolute; height: 50px; width: 245px" Text="Driver Info" />
 
     <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 621px; top: 1618px; position: absolute"></asp:TextBox>
 
