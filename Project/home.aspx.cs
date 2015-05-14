@@ -14,11 +14,11 @@ public partial class home : System.Web.UI.Page
     
     protected void Button3_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("AutoInsuranceHome.aspx");
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("LifeInsuranceHome.aspx");
     }
     protected void Button5_Click(object sender, EventArgs e)
     {

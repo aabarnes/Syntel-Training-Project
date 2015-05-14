@@ -18,19 +18,19 @@ public partial class LifeInsurance : System.Web.UI.Page
     }
     protected void Button6_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("Driver-Info.aspx");
     }
     protected void Button5_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("Home.aspx");
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("AutoInsuranceHome.aspx");
     }
     protected void Button3_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("Claims_Center.aspx");
     }
     protected void Button7_Click(object sender, EventArgs e)
     {
@@ -71,6 +71,16 @@ public partial class LifeInsurance : System.Web.UI.Page
             SqlCommand cmdobj = new SqlCommand("Insert into LifeInsurance values (" + Convert.ToDouble(TextBox4.Text) +
                 "," +policy_max + ",'" + TextBox5.Text + "')", conobj);
             cmdobj.ExecuteNonQuery();
+
+            cmdobj = new SqlCommand("SELECT count(*) from LifeInsurance", conobj);
+            SqlDataReader sdrobj = cmdobj.ExecuteReader();
+            sdrobj.Read();
+            int policynum = sdrobj.GetInt32(0);
+            sdrobj.Close();
+            cmdobj = new SqlCommand("UPDATE Users set LifePolicyNum=" +
+                policynum + " where Username='" + Session["User"] + "'", conobj);
+            cmdobj.ExecuteNonQuery(); 
+            Response.Redirect("Home.aspx");
             }
 
         }
