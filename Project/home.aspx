@@ -6,7 +6,7 @@
 
      
     <div id="banner">
-        <asp:ImageButton ID="ImageButton4" runat="server" style="height: 300px; width: 100%" /><br />
+        <asp:ImageButton ID="ImageButton4" runat="server" style="height: 300px; width: 100%" ImageUrl="~/Images/home image.png" /><br />
         <div id="buttonRow" style="padding-top:5px;">
             <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="height: 50px; width: 23%" Text="Auto Insurance" />&nbsp;
             <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="height: 50px; width: 23%" Text="Life Insurance" />&nbsp;
