@@ -23,4 +23,20 @@ public partial class LifeInsuranceHome : System.Web.UI.Page
             Response.Redirect("Registration.aspx");
         }
     }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        <asp:ImageButton ID="ImageButton4" runat="server" style="height: 300px; width: 100%" />
+        <asp:ImageButton ID="ImageButton4" runat="server" style="clear:left; height: 300px; width: 100%" />
     </div>
     <div style="padding:5px;">
         <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="height: 50px; width: 23%" Text="Term" />

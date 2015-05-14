@@ -16,22 +16,7 @@ public partial class LifeInsurance : System.Web.UI.Page
             Response.Redirect("Registration.aspx");
         }
     }
-    protected void Button6_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Driver-Info.aspx");
-    }
-    protected void Button5_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Home.aspx");
-    }
-    protected void Button4_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("AutoInsuranceHome.aspx");
-    }
-    protected void Button3_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Claims_Center.aspx");
-    }
+ 
     protected void Button7_Click(object sender, EventArgs e)
     {
         if (CheckBox1.Checked)

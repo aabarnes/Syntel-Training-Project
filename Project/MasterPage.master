@@ -79,24 +79,36 @@
                 <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
             </div>  
         </div>
-        
-        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 2; right: 226px; top: 81px; position: absolute; overflow:visible!important; height: 200px; width: 138px;">
+        <div style="clear:both;"></div>
+        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 2; float:right; overflow:visible!important; height: 200px; width: 138px;">
             <div style="padding:2px; height:100%; text-align: left;">
-                <asp:Label ID="Label2" runat="server" Text="INDIVIDUALS"></asp:Label>
-
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="100">
-                </asp:DropDownList>
-
-                <asp:TextBox ID="TextBox2" runat="server" Width="100" placeholder="Username"></asp:TextBox>
-                <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" Width="100" placeholder="Password"></asp:TextBox>
-
-                <asp:Button ID="Button2" runat="server" style="width: 122px;" Text="Login" OnClick="Button2_Click" />
-                <asp:Label ID="Label4" runat="server" ForeColor="Red"></asp:Label>
-
-                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
+                <table>
+                    <tr>
+                        <td><asp:Label ID="Label2" runat="server" Text="INDIVIDUALS"></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td><asp:DropDownList ID="DropDownList1" runat="server" Width="100">
+                        </asp:DropDownList></td>
+                    </tr>
+                    <tr>
+                        <td><asp:TextBox ID="TextBox2" runat="server" Width="100" placeholder="Username"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td><asp:TextBox ID="TextBox3" runat="server" TextMode="Password" Width="100" placeholder="Password"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Button ID="Button2" runat="server" style="width: 122px;" Text="Login" OnClick="Button2_Click" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:Label ID="Label4" runat="server" ForeColor="Red"></asp:Label></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink></td>
+                    </tr>
+                </table>
             </div>
          </asp:Panel>
-        <div style="clear:both; background-color:white;">
+        <div style="clear:left; background-color:white;">
          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
          </asp:ContentPlaceHolder>
         </div>
