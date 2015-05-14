@@ -12,7 +12,6 @@
             min-width:700px;
             padding-left:15%;
             padding-right:15%;
-           
         }
 
         .right {
@@ -51,7 +50,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div id="wrapper">
+    <div class="wrapper">
         <form id="form1" runat="server">
         <div id="top">
             <div class="left">
@@ -69,7 +68,7 @@
             <asp:TextBox ID="TextBox1" runat="server" style="width: 300px;"></asp:TextBox>
             <asp:ImageButton ID="ImageButton2" runat="server" style="height: 18px;" ImageUrl="~/Images/searchgo.png" />
         </div>
-        <div style="clear:both;">
+        <div style="clear:both; padding-top:5px;">
             <div class="left">
                 <asp:ImageButton ID="ImageButton3" runat="server" Height="41px" OnClick="ImageButton3_Click" style="Width: 154px" ImageUrl="~/Images/Logo.png" />
             </div>
