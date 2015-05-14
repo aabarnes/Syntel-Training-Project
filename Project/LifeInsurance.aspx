@@ -133,24 +133,16 @@
 
      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 289px; top: 1430px; position: absolute" ControlToValidate="RadioButtonList2"></asp:RequiredFieldValidator>
 
-    <asp:Label ID="Label12" runat="server" style="z-index: 1; left: 482px; top: 1682px; position: absolute" Text="How long will you pay for it in years?" Font-Size="X-Large"></asp:Label>
 
-    <asp:DropDownList ID="DropDownList5" runat="server" style="z-index: 1; left: 681px; top: 1777px; position: absolute">
-        <asp:ListItem>10</asp:ListItem>
-        <asp:ListItem>20</asp:ListItem>
-        <asp:ListItem>30</asp:ListItem>
-        <asp:ListItem>40</asp:ListItem>
-    </asp:DropDownList>
+    <asp:CheckBox ID="CheckBox1" runat="server" style="z-index: 1; left: 659px; top: 1884px; position: absolute" Text="Confirm" />
 
-    <asp:CheckBox ID="CheckBox1" runat="server" style="z-index: 1; left: 663px; top: 1942px; position: absolute" Text="Confirm" />
+     <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 615px; top: 1808px; position: absolute"></asp:TextBox>
 
-     <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 621px; top: 1914px; position: absolute"></asp:TextBox>
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 292px; top: 1807px; position: absolute" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
 
-     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be blank" style="z-index: 1; left: 278px; top: 1898px; position: absolute" ControlToValidate="TextBox5"></asp:RequiredFieldValidator>
+     <asp:Label ID="Label13" runat="server" style="z-index: 1; left: 538px; top: 1714px; position: absolute" Text="Who will be your benificiary?" Font-Size="X-Large"></asp:Label>
 
-     <asp:Label ID="Label13" runat="server" style="z-index: 1; left: 530px; top: 1840px; position: absolute" Text="Who will be your benificiary?" Font-Size="X-Large"></asp:Label>
-
-    <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 668px; top: 2001px;  position: absolute" Text="Submit" OnClick="Button7_Click" />
+    <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 656px; top: 1969px;  position: absolute" Text="Submit" OnClick="Button7_Click" />
 
     <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 507px; top: 1535px; position: absolute" Text="How much do you intend to pay?" Font-Size="X-Large"></asp:Label>
      </div>

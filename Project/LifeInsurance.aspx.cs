@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -34,53 +36,43 @@ public partial class LifeInsurance : System.Web.UI.Page
     {
         if (CheckBox1.Checked)
         {
-            if(DropDownList3.SelectedIndex > -1 && DropDownList4.SelectedIndex > -1 && DropDownList5.SelectedIndex > -1 && DropDownList2.SelectedIndex > -1 && RadioButtonList1.SelectedIndex > -1 && RadioButtonList2.SelectedIndex > -1){
+            if(DropDownList3.SelectedIndex > -1 && DropDownList4.SelectedIndex > -1 && DropDownList2.SelectedIndex > -1 && RadioButtonList1.SelectedIndex > -1 && RadioButtonList2.SelectedIndex > -1){
             double starting_payment = Convert.ToDouble(TextBox4.Text);
+            double life_expectancy = 80 - Convert.ToDouble(DropDownList2.SelectedIndex);
+            double policy_max = life_expectancy * starting_payment;
+            int diseases = 0;
             
-            double five = starting_payment * 1.05;
-            double ten = starting_payment * 1.1;
-            double fifteen = starting_payment * 1.15;
-            if (RadioButtonList2.SelectedIndex == 0)
+            if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex <= 19 || ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 24))
             {
-                starting_payment += five;
+                double bmi = (DropDownList3.SelectedIndex * 703)/ DropDownList4.SelectedIndex;
+                policy_max = policy_max * (bmi * .02);
             }
-            if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex <= 19 || ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 24 && (DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex <= 29))
-            {
-                starting_payment += five;
-            }
-            else
-            {
-                if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 29 && (DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex < 40)
-                {
-                    starting_payment += ten;
-                }
-                else
-                {
-                    if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 40)
-                    {
-                        starting_payment += fifteen;
-                    }
-                }
-            }
-            if (DropDownList2.SelectedIndex >= 50)
-            {
-                starting_payment += five;
-            }
-
+            
             for (int i = 0; i < CheckBoxList1.Items.Count; i++)
             {
                 if (CheckBoxList1.Items[i].Selected)
                 {
-                    starting_payment += five;
+                    diseases++;
                 }
             }
-            if (RadioButtonList1.SelectedIndex == 0)
+            double bad = diseases * .05;
+            policy_max = 1 - bad;
+            if (RadioButtonList2.SelectedIndex == 0)
             {
-                starting_payment +=  five;
+                policy_max = policy_max * .9;
             }
-            double yearly_payment = starting_payment / DropDownList5.SelectedIndex;
-            double monthly_payment = yearly_payment / 12;
+            
+            
+
+            SqlConnection conobj = new SqlConnection();
+            conobj.ConnectionString = WebConfigurationManager
+                .ConnectionStrings["DBConString"].ConnectionString;
+            conobj.Open();
+            SqlCommand cmdobj = new SqlCommand("Insert into LifeInsurance values (" + Convert.ToDouble(TextBox4.Text) +
+                "," +policy_max + ",'" + TextBox5.Text + "')", conobj);
+            cmdobj.ExecuteNonQuery();
             }
+
         }
         
     }
