@@ -71,6 +71,16 @@ public partial class LifeInsurance : System.Web.UI.Page
             SqlCommand cmdobj = new SqlCommand("Insert into LifeInsurance values (" + Convert.ToDouble(TextBox4.Text) +
                 "," +policy_max + ",'" + TextBox5.Text + "')", conobj);
             cmdobj.ExecuteNonQuery();
+
+            cmdobj = new SqlCommand("SELECT count(*) from LifeInsurance", conobj);
+            SqlDataReader sdrobj = cmdobj.ExecuteReader();
+            sdrobj.Read();
+            int policynum = sdrobj.GetInt32(0);
+            sdrobj.Close();
+            cmdobj = new SqlCommand("UPDATE Users set LifePolicyNum=" +
+                policynum + " where Username='" + Session["User"] + "'", conobj);
+            cmdobj.ExecuteNonQuery(); 
+            Response.Redirect("Home.aspx");
             }
 
         }
