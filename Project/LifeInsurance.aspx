@@ -62,7 +62,7 @@
             <br />
             <br />
             <asp:Label ID="Label6" runat="server" Text="Please enter your gender" Font-Size="X-Large"></asp:Label><br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList1"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" style="height: 28px; width: 100%">
                 <asp:ListItem>Male</asp:ListItem>
                 <asp:ListItem>Female</asp:ListItem>
@@ -132,18 +132,18 @@
             </asp:CheckBoxList>
             <br />
             <asp:Label ID="Label10" runat="server" Text="Do you smoke?" Font-Size="X-Large"></asp:Label><br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList2"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList2" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RadioButtonList ID="RadioButtonList2" runat="server" style="height: 28px; width: 100%">
                 <asp:ListItem>yes</asp:ListItem>
                 <asp:ListItem>no</asp:ListItem>
             </asp:RadioButtonList>
             <br /><br />
             <asp:Label ID="Label11" runat="server" Text="How much do you intend to pay?" Font-Size="X-Large"></asp:Label><br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="TextBox4"></asp:RequiredFieldValidator><br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="TextBox4" ForeColor="Red"></asp:RequiredFieldValidator><br />
             <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             <br /><br />
             <asp:Label ID="Label13" runat="server" Text="Who will be your benificiary?" Font-Size="X-Large"></asp:Label><br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="TextBox5"></asp:RequiredFieldValidator><br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="TextBox5" ForeColor="Red"></asp:RequiredFieldValidator><br />
             <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
             <br /><br />
             <asp:CheckBox ID="CheckBox1" runat="server" Text="Confirm" />
