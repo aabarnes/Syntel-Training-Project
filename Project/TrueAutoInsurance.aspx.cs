@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -46,8 +48,29 @@ public partial class TrueAutoInsurance : System.Web.UI.Page
                     yearly_payment += fifty;
                 }
                 double monthly_payment = yearly_payment / 12;
+                SqlConnection conobj = new SqlConnection();
+                conobj.ConnectionString = WebConfigurationManager
+                    .ConnectionStrings["DBConString"].ConnectionString;
+                conobj.Open();
+                SqlCommand cmdobj = new SqlCommand("Insert into AutoInsurance values ("+monthly_payment+",1000)", conobj);
+                cmdobj.ExecuteNonQuery();
 
+                cmdobj = new SqlCommand("SELECT count(*) from autoInsurance", conobj);
+                SqlDataReader sdrobj = cmdobj.ExecuteReader();
+                sdrobj.Read();
+                int policynum = sdrobj.GetInt32(0);
+                sdrobj.Close();
+                cmdobj = new SqlCommand("UPDATE Users set AutoPolicyNum=" +
+                    policynum + " where Username='" + Session["User"] + "'", conobj);
+                cmdobj.ExecuteNonQuery();
+                try { 
+                if ((bool)Session["Life"])
+                {
+                    Response.Redirect("LifeInsurance.aspx");
+                }}
+                catch { }
                 Response.Redirect("Home.aspx");
+                
             }
 
         }
