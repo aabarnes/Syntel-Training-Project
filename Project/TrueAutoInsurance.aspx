@@ -41,7 +41,7 @@
         </asp:RadioButtonList>        
         <br />
         <asp:CheckBox ID="CheckBox1" runat="server" Text="Confirm" /><br /><br />
-        <asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" />
+        <asp:Button ID="Button3" runat="server" Text="Submit" OnClick="Button3_Click" />
     </div>
 </asp:Content>
 

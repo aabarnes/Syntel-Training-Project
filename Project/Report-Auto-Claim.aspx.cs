@@ -58,7 +58,7 @@ public partial class Report_Auto_Claim : System.Web.UI.Page
             Calendar1.SelectedDate.ToShortDateString() + "')", conobj);
         cmdobj.ExecuteNonQuery();
 
-        cmdobj = new SqlCommand("SELECT count(*) from autoclaim", conobj);
+        cmdobj = new SqlCommand("SELECT MAX(claimnum) from autoclaim", conobj);
         sdrobj = cmdobj.ExecuteReader();
         sdrobj.Read();
         Session["claimnum"] = sdrobj.GetInt32(0);

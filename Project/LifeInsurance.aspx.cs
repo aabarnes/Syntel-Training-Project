@@ -22,15 +22,15 @@ public partial class LifeInsurance : System.Web.UI.Page
         if (CheckBox1.Checked)
         {
             if(DropDownList3.SelectedIndex > -1 && DropDownList4.SelectedIndex > -1 && DropDownList2.SelectedIndex > -1 && RadioButtonList1.SelectedIndex > -1 && RadioButtonList2.SelectedIndex > -1){
-            double starting_payment = Convert.ToDouble(TextBox4.Text);
-            double life_expectancy = 80 - Convert.ToDouble(DropDownList2.SelectedIndex);
-            double policy_max = life_expectancy * starting_payment;
+            int starting_payment = Convert.ToInt32(TextBox4.Text);
+            int life_expectancy = 80 - Convert.ToInt32(DropDownList2.SelectedValue);
+            int policy_max = life_expectancy * starting_payment;
             int diseases = 0;
-            
-            if ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex <= 19 || ((DropDownList3.SelectedIndex * 703) / DropDownList4.SelectedIndex >= 24))
+
+            if ((Convert.ToInt32(DropDownList3.SelectedValue) * 703) / Convert.ToInt32(DropDownList4.SelectedValue) <= 19 || ((Convert.ToInt32(DropDownList3.SelectedValue) * 703) / Convert.ToInt32(DropDownList4.SelectedValue) >= 24))
             {
-                double bmi = (DropDownList3.SelectedIndex * 703)/ DropDownList4.SelectedIndex;
-                policy_max = policy_max *Math.Abs(1- ((bmi-24) * .02));
+                double bmi = (Convert.ToInt32(DropDownList3.SelectedValue) * 703)/ Convert.ToInt32(DropDownList4.SelectedValue);
+                policy_max *= (int)Math.Abs(1- ((bmi-24) * .02));
             }
             
             for (int i = 0; i < CheckBoxList1.Items.Count; i++)
@@ -41,10 +41,10 @@ public partial class LifeInsurance : System.Web.UI.Page
                 }
             }
             double bad = diseases * .05;
-            policy_max *= (1 - bad);
+            policy_max *= (int)(1 - bad);
             if (RadioButtonList2.SelectedIndex == 0)
             {
-                policy_max = policy_max * .9;
+                policy_max =(int)(policy_max * .9);
             }
             
             
