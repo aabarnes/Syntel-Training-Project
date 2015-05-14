@@ -33,7 +33,7 @@ public partial class AutoInsuranceHome : System.Web.UI.Page
     }
     protected void Button5_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("Claims_Center.aspx");
     }
     protected void Button6_Click(object sender, EventArgs e)
     {
