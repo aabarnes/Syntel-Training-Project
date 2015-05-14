@@ -46,8 +46,14 @@ public partial class TrueAutoInsurance : System.Web.UI.Page
                     yearly_payment += fifty;
                 }
                 double monthly_payment = yearly_payment / 12;
-
-                Response.Redirect("Home.aspx");
+                if ((bool)Session["Life"])
+                {
+                    Response.Redirect("LifeInsurance.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
             }
 
         }
