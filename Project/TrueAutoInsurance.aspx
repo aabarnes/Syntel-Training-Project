@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
+        <br />
         <asp:Label ID="Label5" runat="server" Text="Do you want Liability Coverage to cover you against damages to other people and other vehicles?" Font-Size="X-Large"></asp:Label><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList1"></asp:RequiredFieldValidator>
         <asp:RadioButtonList ID="RadioButtonList1" runat="server" style="height: 28px; width: 96px">

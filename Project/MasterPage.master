@@ -80,19 +80,21 @@
             </div>  
         </div>
         
-        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 1; right: 26px; top: 73px; position: absolute; overflow:visible!important; height: 200px; width: 145px;">
-            <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 0px; top: 0px; position: absolute;" Text="INDIVIDUALS"></asp:Label>
+        <asp:Panel ID="Panel2" runat="server" Visible="false" style="z-index: 2; right: 226px; top: 81px; position: absolute; overflow:visible!important; height: 200px; width: 138px;">
+            <div style="padding:2px; height:100%; text-align: left;">
+                <asp:Label ID="Label2" runat="server" Text="INDIVIDUALS"></asp:Label>
 
-            <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 0px; top: 25px; position: absolute" Width="100">
-            </asp:DropDownList>
+                <asp:DropDownList ID="DropDownList1" runat="server" Width="100">
+                </asp:DropDownList>
 
-            <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 0px; top: 50px; position: absolute" Width="100" placeholder="Username"></asp:TextBox>
-            <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" style="z-index: 1; left: 0px; top: 75px; position: absolute" Width="100" placeholder="Password"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Width="100" placeholder="Username"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" TextMode="Password" Width="100" placeholder="Password"></asp:TextBox>
 
-            <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 0px; top: 100px; position: absolute; width: 122px;" Text="Login" OnClick="Button2_Click" />
-            <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 0px; top: 130px; position: absolute" ForeColor="Red"></asp:Label>
+                <asp:Button ID="Button2" runat="server" style="width: 122px;" Text="Login" OnClick="Button2_Click" />
+                <asp:Label ID="Label4" runat="server" ForeColor="Red"></asp:Label>
 
-            <asp:HyperLink ID="HyperLink5" runat="server" style="z-index: 1; left: 0px; top: 160px; position: absolute" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Registration.aspx">Sign up</asp:HyperLink>
+            </div>
          </asp:Panel>
         <div style="clear:both; background-color:white;">
          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >

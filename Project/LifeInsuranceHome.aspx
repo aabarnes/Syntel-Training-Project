@@ -3,6 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div>
+        <asp:ImageButton ID="ImageButton4" runat="server" style="height: 300px; width: 100%" />
+    </div>
+    <div style="padding:5px;">
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" style="height: 50px; width: 23%" Text="Term" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="height: 50px; width: 23%" Text="Whole" />
+        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" style="height: 50px; width: 23%" Text="Universal" />
+        <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" style="height: 50px; width: 23%" Text="Variable" />
+    </div>
     <div style="padding:5px;">
         <h1>Why Life Insurance?</h1>
         <p>For your life and afterwards</p>
