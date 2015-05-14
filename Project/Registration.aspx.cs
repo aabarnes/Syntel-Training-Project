@@ -29,6 +29,7 @@ public partial class Registration : System.Web.UI.Page
             cmdobj.ExecuteNonQuery();
             Session["Login"] = true;
             Session["User"] = TextBox6.Text;
+            Response.Redirect("home.aspx");
         }
     }
 }
