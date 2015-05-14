@@ -4,15 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
-        div>
-            <asp:ImageButton ID="ImageButton4" runat="server" style="height: 300px; width: 100%" />
-        </div>
-        <div style="padding:5px;">
-            <asp:Button ID="Button1" runat="server" OnClick="Button3_Click" style="height: 50px; width: 23%" Text="Coverages" />
-            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" style="height: 50px; width: 23%" Text="Discounts" />
-            <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" style="height: 50px; width: 23%" Text="Claims" />
-            <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" style="height: 50px; width: 23%" Text="Review" />
-        </div>
         <br />
         <asp:Label ID="Label5" runat="server" Text="Do you want Liability Coverage to cover you against damages to other people and other vehicles?" Font-Size="X-Large"></asp:Label><br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Cannot be blank" ControlToValidate="RadioButtonList1"></asp:RequiredFieldValidator>
